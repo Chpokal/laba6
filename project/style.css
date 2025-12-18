@@ -398,4 +398,95 @@ body {
         display: block;
         overflow-x: auto;
     }
+    
+}
+/* Добавим в конец файла */
+
+.welcome-message {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    margin-top: 2rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.welcome-message h2 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.welcome-message ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+}
+
+.welcome-message li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+/* Стили для деталей пользователя */
+.user-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.user-info-grid > div {
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: var(--border-radius);
+}
+
+.user-info-grid h4 {
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.25rem;
+}
+
+/* Стили для комментариев */
+.comment-card {
+    transition: var(--transition);
+    border-left: 3px solid var(--primary-color);
+}
+
+.comment-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.post-header {
+    border-left: 4px solid var(--primary-color);
+}
+
+/* Адаптивность для маленьких экранов */
+@media (max-width: 480px) {
+    .welcome-message {
+        padding: 1rem;
+    }
+    
+    .welcome-message h2 {
+        font-size: 1.3rem;
+    }
+    
+    .user-info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .search-container {
+        flex-direction: column;
+    }
+    
+    .search-input {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
 }

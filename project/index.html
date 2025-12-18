@@ -12,12 +12,12 @@
         <header class="header">
             <div class="container">
                 <h1 class="logo">JSONPlaceholder SPA</h1>
-                <nav class="nav">
-                    <a href="#users" class="nav-link active">Пользователи</a>
-                    <a href="#users#todos" class="nav-link">Todo</a>
-                    <a href="#users#posts" class="nav-link">Посты</a>
-                    <a href="#users#posts#comments" class="nav-link">Комментарии</a>
-                </nav>
+                    <nav class="nav">
+                        <a href="#users" class="nav-link active" data-route>👥 Пользователи</a>
+                        <a href="#users#todos" class="nav-link" data-route>✅ Задачи</a>
+                        <a href="#users#posts" class="nav-link" data-route>📝 Посты</a>
+                        <a href="#users#posts#comments" class="nav-link" data-route>💬 Все комментарии</a>
+                    </nav>
             </div>
         </header>
 
@@ -26,9 +26,9 @@
         <div class="actions-bar">
             <div class="container">
                 <div class="search-container">
-                    <input type="text" id="search-input" placeholder="Поиск..." class="search-input">
+                    <input type="text" id="search-input" placeholder="Введите текст для поиска..." class="search-input">
                     <button id="search-btn" class="search-btn">
-                        <i class="fas fa-search"></i>
+                        <i class="fas fa-search"></i> Найти
                     </button>
                 </div>
                 <div class="actions">
@@ -40,13 +40,30 @@
         </div>
 
         <main class="container">
-            <div id="content"></div>
+            <div id="content">
+                <div class="welcome-message">
+                    <h2>👋 Добро пожаловать в JSONPlaceholder SPA!</h2>
+                    <p>Это учебное приложение для работы с JSONPlaceholder API.</p>
+                    <p>🎯 <strong>Доступные функции:</strong></p>
+                    <ul>
+                        <li>📋 <strong>Просмотр пользователей</strong> - с информацией и возможностью удаления</li>
+                        <li>✅ <strong>Управление задачами</strong> - просмотр, добавление и удаление задач</li>
+                        <li>📝 <strong>Чтение постов</strong> - с возможностью просмотра деталей</li>
+                        <li>💬 <strong>Комментарии к постам</strong> - полный список комментариев</li>
+                        <li>🔍 <strong>Поиск</strong> - фильтрация данных на всех страницах</li>
+                        <li>➕ <strong>Добавление пользователей</strong> - с сохранением в LocalStorage</li>
+                    </ul>
+                    <p style="margin-top: 1rem; padding: 1rem; background: #e8f4fd; border-radius: 8px;">
+                        <strong>💡 Совет:</strong> Нажмите на любую ссылку в меню выше, чтобы начать!
+                    </p>
+                </div>
+            </div>
         </main>
 
         <div id="modal" class="modal">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h2 id="modal-title">Добавить пользователя</h2>
+                    <h2 id="modal-title">Модальное окно</h2>
                     <button id="modal-close" class="modal-close">&times;</button>
                 </div>
                 <div class="modal-body" id="modal-body"></div>
@@ -55,11 +72,14 @@
 
         <footer class="footer">
             <div class="container">
-                <p>Лабораторная работа по JavaScript. JSONPlaceholder API</p>
+                <p>📚 Лабораторная работа по JavaScript | 📊 JSONPlaceholder API | 💻 SPA приложение</p>
+                <p style="font-size: 0.9rem; margin-top: 0.5rem; opacity: 0.8;">
+                    Используйте навигацию выше для переключения между разделами
+                </p>
             </div>
         </footer>
     </div>
 
-    <script src="app.js" type="module"></script>
+    <script src="app.js"></script>
 </body>
 </html>
